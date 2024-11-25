@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toolkit Universe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-logo">Toolkit Universe</div>
+        <div class="nav-tabs">
+            <button class="tab-link active" data-tool="home">Home</button>
+            <button class="tab-link" data-tool="age-zodiac">Age & Zodiac</button>
+            <button class="tab-link" data-tool="temperature-converter">Temperature</button>
+            <button class="tab-link" data-tool="inspirational-quotes">Quotes</button>
+            <button class="tab-link" data-tool="bmi-calculator">BMI Calculator</button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="tool-section active">
+            <div class="hero-content">
+                <h1>TOOLKIT UNIVERSE</h1>
+                <p>Explore powerful tools designed to simplify your daily tasks.</p>
+                <button class="cta-button" data-tool="age-zodiac">Get Started</button>
+            </div>
+        </section>
+
+        <!-- Age & Zodiac Section -->
+        <section id="age-zodiac" class="tool-section">
+            <h2>Age & Zodiac</h2>
+            <label for="birthdate">Enter Your Birthdate:</label>
+            <input type="date" id="birthdate">
+            <p class="error-message" id="birthdate-error"></p>
+            <button onclick="calculateAgeAndZodiac()">Calculate</button>
+            <div id="age-result"></div>
+        </section>
+
+        <!-- Temperature Converter Section -->
+        <section id="temperature-converter" class="tool-section">
+            <h2>Temperature Converter</h2>
+            <label for="temp-input">Enter Temperature:</label>
+            <input type="number" id="temp-input">
+            <select id="temp-unit">
+                <option value="C">Celsius</option>
+                <option value="F">Fahrenheit</option>
+            </select>
+            <button onclick="convertTemperature()">Convert</button>
+            <div id="temp-result"></div>
+        </section>
+
+        <!-- Quotes Section -->
+        <section id="inspirational-quotes" class="tool-section">
+            <h2>Inspirational Quotes</h2>
+            <button onclick="generateQuote()">Get a Quote</button>
+            <div id="quote-result"></div>
+        </section>
+
+        <!-- BMI Calculator Section -->
+        <section id="bmi-calculator" class="tool-section">
+            <h2>BMI Calculator</h2>
+            <label for="weight">Weight:</label>
+            <input type="number" id="weight" placeholder="Enter your weight">
+            <select id="weight-unit">
+                <option value="kg">Kilograms (kg)</option>
+                <option value="lbs">Pounds (lbs)</option>
+            </select>
+            <p class="error-message" id="weight-error"></p>
+
+            <label for="height">Height:</label>
+            <input type="number" id="height" placeholder="Enter your height">
+            <select id="height-unit">
+                <option value="m">Meters (m)</option>
+                <option value="cm">Centimeters (cm)</option>
+                <option value="in">Inches (in)</option>
+            </select>
+            <p class="error-message" id="height-error"></p>
+
+            <button onclick="calculateBMI()">Calculate BMI</button>
+            <div id="bmi-result"></div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Toolkit Universe. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
